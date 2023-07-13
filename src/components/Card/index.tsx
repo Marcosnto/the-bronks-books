@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import { CardProps } from "../../utils/types/components";
 
-type CardProps = {
-  id: number;
-  author: string;
-  imageLink: string;
-  title: string;
-  year: number;
-  price: string;
-};
 
 export default function Card({
   id,

@@ -1,8 +1,4 @@
-type ButtonProps = {
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-};
+import { ButtonProps } from "../../utils/types/components";
 
 export default function Button({ label, onClick, disabled }: ButtonProps) {
   return (
