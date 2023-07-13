@@ -17,12 +17,10 @@ export default function Card({
       className="
     bg-slate-100 
       w-60
-      max-w-sm
       flex 
       flex-col 
       gap-3
       p-3 
-      min-w-fit
       rounded-lg
       items-center
       "
@@ -31,10 +29,10 @@ export default function Card({
         <img
           src={imageLink}
           alt={`Capa do livro ${title}`}
-          className="w-40 h-40 "
+          className="w-40 h-40"
         />
       </Link>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 items-center w-auto">
         <Link to="/">
           <header className="text-md font-light flex-wrap">{title}</header>
         </Link>
