@@ -7,7 +7,9 @@ export default function Button({ label, onClick, disabled }: ButtonProps) {
       bg-emerald-800 
       text-cyan-50 p-2 
       hover:bg-emerald-600
-      rounded-lg"
+      rounded-lg
+      w-full
+      "
       type="button"
       onClick={onClick}
       disabled={disabled}
