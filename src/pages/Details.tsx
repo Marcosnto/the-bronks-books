@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import fetchBookDetails from "../api/fetchBookDetails";
 import Header from "../components/Header";
 import { useParams } from "react-router-dom";
+import BookDetails from "../components/BookDetails";
 
 export default function Details() {
   const { bookID } = useParams();
@@ -18,11 +19,11 @@ export default function Details() {
   if (isError) {
     return <h1>erro</h1>;
   }
-  console.log(data);
+
   return (
     <>
       <Header title="BookStore" />
-      <h1>Details {bookID}</h1>
+      <BookDetails data={data} />
     </>
   );
 }
