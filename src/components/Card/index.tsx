@@ -25,7 +25,7 @@ export default function Card({
       items-center
       "
     >
-      <Link to="/">
+      <Link to={`book/${id}`}>
         <img
           src={imageLink}
           alt={`Capa do livro ${title}`}
@@ -33,7 +33,7 @@ export default function Card({
         />
       </Link>
       <div className="flex flex-col gap-1 items-center w-auto">
-        <Link to="/">
+        <Link to={`book/${id}`}>
           <header className="text-md font-light flex-wrap">{title}</header>
         </Link>
         <span className="text-sm text-gray-500">
