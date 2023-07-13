@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
@@ -10,12 +11,24 @@ import "./index.css";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity,
+      cacheTime: Infinity,
+    },
+  },
+});
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <QueryClientProvider client={queryClient}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );
