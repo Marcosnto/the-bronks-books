@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import { CardProps } from "../../utils/types/components";
-
+import useStore from "../../store";
 
 export default function Card({
   id,
@@ -11,6 +11,8 @@ export default function Card({
   year,
   price,
 }: CardProps) {
+  const store = useStore();
+
   return (
     <div
       key={id}
@@ -23,6 +25,7 @@ export default function Card({
       p-3 
       rounded-lg
       items-center
+      justify-evenly
       "
     >
       <Link to={`book/${id}`}>
@@ -41,7 +44,14 @@ export default function Card({
         </span>
       </div>
       <span className="font-bold text-gray-950">R$ {price}</span>
-      <div className="w-full">
+      <div className="flex flex-col w-full gap-3">
+        <Button
+          label="Adicionar ao Carrinho"
+          onClick={() => {
+            store.setNewBook({ id, title, imageLink, price, quantity: 1 });
+            store.addToCart();
+          }}
+        />
         <Button label="Comprar" onClick={() => console.log("comprei")} />
       </div>
     </div>

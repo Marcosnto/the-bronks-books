@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
-import { BookProps } from "../../utils/types/components";
+import { GetBookProps } from "../../utils/types/components";
 import Button from "../Button";
 
 import { BiChevronLeft } from "react-icons/bi";
 
-export default function BookDetails({ data }: BookProps) {
+import useStore from "../../store";
+
+export default function BookDetails({ data }: GetBookProps) {
+  const store = useStore();
+
   const { author, year, imageLink, title, price, country, language, pages } =
     data;
 
@@ -47,7 +51,7 @@ export default function BookDetails({ data }: BookProps) {
           <div className="flex flex-col gap-4 w-full">
             <Button
               label="Adicionar ao Carrinho"
-              onClick={() => console.log("comprei")}
+              onClick={() => store.addToCart()}
             />
             <Button label="Comprar" onClick={() => console.log("comprei")} />
           </div>

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { HeaderProps } from "../../utils/types/components";
 import { BiCart } from "react-icons/bi";
+import useStore from "../../store";
 
 export default function Header({ title }: HeaderProps) {
+  const store = useStore();
+
   return (
     <div
       className="
@@ -41,7 +44,7 @@ export default function Header({ title }: HeaderProps) {
           text-black
           w-[1.1rem] h-[1.1rem]"
         >
-          3
+          {store.quantityItems}
         </span>
       </div>
     </div>
