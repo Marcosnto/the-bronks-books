@@ -2,16 +2,19 @@ import { useQuery } from "react-query";
 import fetchBooks from "../../api/fetchBooks";
 import Card from "../Card";
 import { CardProps } from "../../utils/types/components";
+import DisplayMessage from "../DisplayMessage";
 
 export default function CardCollection() {
   const { data, isLoading, isError } = useQuery(["books"], fetchBooks);
 
   if (isLoading) {
-    return <h1>carregando...</h1>;
+    return <DisplayMessage message="carregando..." />;
   }
 
   if (isError) {
-    return <h1>erro</h1>;
+    return (
+      <DisplayMessage message="Ocorreu um erro ao carregar dos dados :(" />
+    );
   }
 
   return (

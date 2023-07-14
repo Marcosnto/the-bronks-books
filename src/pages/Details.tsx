@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 
 import fetchBookDetails from "../api/fetchBookDetails";
 import BookDetails from "../components/BookDetails";
+import DisplayMessage from "../components/DisplayMessage";
 
 import { Book } from "../utils/types/components";
 
@@ -15,11 +16,13 @@ export default function Details() {
   });
 
   if (isLoading) {
-    return <h1>carregando...</h1>;
+    return <DisplayMessage message="carregando..." />;
   }
 
   if (isError) {
-    return <h1>erro</h1>;
+    return (
+      <DisplayMessage message="Ocorreu um erro ao buscar os dados deste livro :(" />
+    );
   }
 
   if (data) {

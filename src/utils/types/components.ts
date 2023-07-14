@@ -38,6 +38,10 @@ export type CartItemProps = {
   quantity: number;
 };
 
+export type DisplayMessageProps = {
+  message: string;
+};
+
 export type GoBackButtonProps = {
   to: string;
 };
