@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
-
 import { Book } from "../../utils/types/components";
 import Button from "../Button";
 
-import { BiChevronLeft } from "react-icons/bi";
-
 import useStore from "../../store";
+import GoBackButton from "../GoBackButton";
 
 export default function BookDetails({
   author,
@@ -21,12 +18,7 @@ export default function BookDetails({
 
   return (
     <>
-      <div className="flex items-start w-full mb-3">
-        <Link className="ml-2 font-light flex items-center text-xl" to="/">
-          <BiChevronLeft className="text-2xl" />
-          Voltar
-        </Link>
-      </div>
+      <GoBackButton to="/" />
       <div
         className="
       w-full
