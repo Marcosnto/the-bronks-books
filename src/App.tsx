@@ -4,6 +4,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Cart from "./pages/Cart";
+import RegisterBook from "./pages/RegisterBook";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -27,6 +29,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/book/:bookID" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/addBook" element={<RegisterBook />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />

@@ -27,7 +27,7 @@ export type CartItemProps = {
 };
 
 export type Book = {
-  id: number;
+  id?: number;
   author: string;
   country: string;
   imageLink: string;
@@ -49,4 +49,13 @@ export type GoBackButtonProps = {
 
 export type HeaderProps = {
   title: string;
+};
+
+export type FormLabelProps = {
+  label: string;
+  htmlFor: string;
+};
+
+export type ErrorMessageProps = {
+  message: string | undefined;
 };
