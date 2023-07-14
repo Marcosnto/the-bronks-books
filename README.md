@@ -4,7 +4,7 @@ The project consists of a store that displays diverse books, allowing the user t
 
 ## Learning Process and choices
 
-The project was developed using React (using create-react-app as a framework) and the libraries described below. I chose to use technologies that I had not directly used in the professional environments I have worked in, such as Tailwind, Zustand, and ReactQuery. This allowed me to explore new tools and expand my knowledge. To guide me during this process, I used the documentation for each of them and community-produced articles/videos, some of which are mentioned below.
+The project was developed using React (using create-react-app as a framework) and the libraries described below. I chose to use technologies that I had not directly used in the professional environments I have worked in, such as Tailwind, Zustand, and ReactQuery. This allowed me to explore new tools and expand my knowledge. To guide me during this process, I used the documentation for each of them and community-produced articles/videos (Stackoverflow, medium, youtuber as Jack Herrington).
 
 Regarding code quality, I chose to use Eslint, Prettier, and TypeScript to help me in writing code that is easy to understand and maintain.
 
@@ -18,13 +18,15 @@ Finally, there are some areas for improvement in the code, such as componentizin
 <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/W3C">HTML5</a></li>
 <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">CSS3</a></li>
 <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">JavaScript<a></li>
-<li><a href="https://www.typescriptlang.org/">Typescript<a></li>
+<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
 </ul>
 
 ## Frameworks & Libs
 
 <ul>
 <li><a href="https://create-react-app.dev/">React by Create React App</a></li>
+<li><a href="https://tanstack.com/query/v4/docs/react/overview">React Query</a></li>
+<li><a href="https://reactrouter.com/en/main">React Router</a></li>
 <li><a href="https://tailwindcss.com/">Tailwind</a></li>
 <li><a href="https://zustand-demo.pmnd.rs/">Zustand</a></li>
 <li><a href="https://github.com/typicode/json-server">json-server</a></li>
@@ -33,7 +35,7 @@ Finally, there are some areas for improvement in the code, such as componentizin
 <li><a href="https://eslint.org/">Eslint</a></li>
 <li><a href="https://prettier.io/">Prettier</a></li>
 </ul>
-  
+
 ## Execution
 
 First, it is necessary to execute the database command so that the db.json files are loaded on port 3333.
