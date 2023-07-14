@@ -13,19 +13,17 @@ export type CardProps = {
   price: string;
 };
 
-export type BookProps = {
-  data: {
-    id: number;
-    author: string;
-    country: string;
-    imageLink: string;
-    language: string;
-    link: string;
-    pages: number;
-    title: string;
-    year: number;
-    price: string;
-  };
+export type Book = {
+  id: number;
+  author: string;
+  country: string;
+  imageLink: string;
+  language: string;
+  link?: string;
+  pages: number;
+  title: string;
+  year: number;
+  price: string;
 };
 
 

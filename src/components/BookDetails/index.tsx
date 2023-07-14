@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 
-import { GetBookProps } from "../../utils/types/components";
+import { Book } from "../../utils/types/components";
 import Button from "../Button";
 
 import { BiChevronLeft } from "react-icons/bi";
 
 import useStore from "../../store";
 
-export default function BookDetails({ data }: GetBookProps) {
+export default function BookDetails({
+  author,
+  year,
+  imageLink,
+  title,
+  price,
+  country,
+  language,
+  pages,
+}: Book) {
   const store = useStore();
-
-  const { author, year, imageLink, title, price, country, language, pages } =
-    data;
 
   return (
     <>
