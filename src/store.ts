@@ -45,9 +45,11 @@ const useStore = create<StoreProps>((set) => ({
   quantityItems: 0,
   cart: {},
   newBook: DefaultBook,
+
   getCartItems() {
     return Object.values(this.cart);
   },
+
   getTotalValue() {
     return this.getCartItems().reduce(
       (sum: number, book: StoreBookProps) =>
@@ -55,6 +57,7 @@ const useStore = create<StoreProps>((set) => ({
       0,
     );
   },
+
   addToCart() {
     set((state) => ({
       ...state,
@@ -63,6 +66,7 @@ const useStore = create<StoreProps>((set) => ({
       quantityItems: state.quantityItems + 1,
     }));
   },
+
   addItemToCar(id: number) {
     set((state) => ({
       ...state,
@@ -70,6 +74,7 @@ const useStore = create<StoreProps>((set) => ({
       quantityItems: state.quantityItems + 1,
     }));
   },
+
   removeItem(id: number) {
     set((state) => ({
       ...state,
@@ -77,6 +82,7 @@ const useStore = create<StoreProps>((set) => ({
       quantityItems: state.quantityItems - 1,
     }));
   },
+
   deleteItem(id: number) {
     set((state) => ({
       ...state,
@@ -84,6 +90,7 @@ const useStore = create<StoreProps>((set) => ({
       quantityItems: state.quantityItems - 1,
     }));
   },
+
   setNewBook(book: StoreBookProps) {
     set((state) => ({
       ...state,
