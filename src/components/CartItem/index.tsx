@@ -1,5 +1,6 @@
-import { BiTrash } from "react-icons/bi";
+import { BiTrash, BiPlus, BiMinus } from "react-icons/bi";
 import { CartItemProps } from "../../utils/types/components";
+import Button from "../Button";
 
 export default function CartItem({
   imageLink,
@@ -22,9 +23,24 @@ export default function CartItem({
         </div>
       </div>
       <div className="flex flex-col justify-evenly">
-        <button onClick={() => console.log("deletar")}>
-          <BiTrash className="text-2xl" />
-        </button>
+        <Button
+          backgroundColor="gray-100"
+          textColor="black"
+          onClick={() => console.log("adicionar")}
+          icon={<BiPlus className="text-xl" />}
+        />
+        <Button
+          backgroundColor="gray-100"
+          textColor="black"
+          onClick={() => console.log("diminuir")}
+          icon={<BiMinus className="text-xl" />}
+        />
+        <Button
+          backgroundColor="gray-100"
+          textColor="black"
+          onClick={() => console.log("deletar")}
+          icon={<BiTrash className="text-xl" />}
+        />
       </div>
     </div>
   );
