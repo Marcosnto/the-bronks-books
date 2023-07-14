@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import "./index.css";
-import Checkout from "./pages/Checkout";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,7 +27,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/book/:bookID" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </BrowserRouter>
