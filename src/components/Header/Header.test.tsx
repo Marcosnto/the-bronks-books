@@ -1,15 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import Header from ".";
-
-import { BrowserRouter } from "react-router-dom";
+import { renderWithDeps } from "../../utils/test";
 
 describe("header", () => {
   test("should render with correct name", () => {
-    render(
-      <BrowserRouter>
-        <Header title="ShopTest" />
-      </BrowserRouter>,
-    );
+    renderWithDeps(<Header title="ShopTest" />);
 
     const header = screen.getByText(/ShopTest/i);
 

@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+
 import DisplayMessage from ".";
 
 describe("Display Message", () => {

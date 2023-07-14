@@ -1,15 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { screen } from "@testing-library/react";
 
 import GoBackButton from ".";
+import { renderWithDeps } from "../../utils/test";
 
 describe("GoBackButton", () => {
   test("should show on the page", () => {
-    render(
-      <BrowserRouter>
-        <GoBackButton to="/" />
-      </BrowserRouter>,
-    );
+    renderWithDeps(<GoBackButton to="/" />);
 
     const btn = screen.getByText(/voltar/i);
 
