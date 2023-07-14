@@ -4,18 +4,18 @@ export default function Button({
   label,
   onClick,
   disabled,
-  backgroundColor = "emerald-800",
-  hoverBackgroundColor = "emerald-600",
-  textColor = "cyan-50",
+  backgroundColor = "bg-emerald-800",
+  hoverBackgroundColor = "bg-emerald-600",
+  textColor = "text-white",
   icon,
 }: ButtonProps) {
   return (
     <button
       className={`
-      bg-${backgroundColor}
-      text-${textColor}
+      ${backgroundColor}
+      ${textColor}
       p-2 
-      hover:bg-${hoverBackgroundColor}
+      hover:${hoverBackgroundColor}
       rounded-lg
       w-full
       `}

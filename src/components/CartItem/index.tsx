@@ -24,20 +24,20 @@ export default function CartItem({
       </div>
       <div className="flex flex-col justify-evenly">
         <Button
-          backgroundColor="gray-100"
-          textColor="black"
+          backgroundColor="bg-gray-100"
+          textColor="text-black"
           onClick={() => console.log("adicionar")}
           icon={<BiPlus className="text-xl" />}
         />
         <Button
-          backgroundColor="gray-100"
-          textColor="black"
+          backgroundColor="bg-gray-100"
+          textColor="text-black"
           onClick={() => console.log("diminuir")}
           icon={<BiMinus className="text-xl" />}
         />
         <Button
-          backgroundColor="gray-100"
-          textColor="black"
+          backgroundColor="bg-gray-100"
+          textColor="text-black"
           onClick={() => console.log("deletar")}
           icon={<BiTrash className="text-xl" />}
         />
