@@ -1,5 +1,7 @@
+export type Cart = Record<number, StoreBookProps>;
+
 export type StoreBookProps = {
-  id: number | null;
+  id: number;
   title: string;
   imageLink: string;
   price: string;
@@ -8,8 +10,13 @@ export type StoreBookProps = {
 
 export type StoreProps = {
   quantityItems: number;
-  cart: StoreBookProps[];
+  cart: Cart;
   newBook: StoreBookProps;
   addToCart: () => void;
   setNewBook: (book: StoreBookProps) => void;
+  getCartItems: () => StoreBookProps[];
+  addItem: (id: number) => void;
+  removeItem: (id: number) => void;
+  deleteItem: (id: number) => void;
+  getTotalValue: () => number;
 };
