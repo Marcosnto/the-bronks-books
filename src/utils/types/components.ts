@@ -1,7 +1,11 @@
 export type ButtonProps = {
-  label: string;
+  label?: string;
+  backgroundColor?: string;
+  hoverBackgroundColor?: string;
+  textColor?: string;
   onClick: () => void;
   disabled?: boolean;
+  icon?: JSX.Element;
 };
 
 export type CardProps = {
@@ -26,6 +30,17 @@ export type Book = {
   price: string;
 };
 
+export type CartItemProps = {
+  id?: number;
+  imageLink: string;
+  title: string;
+  price: string;
+  quantity: number;
+};
+
+export type GoBackButtonProps = {
+  to: string;
+};
 
 export type HeaderProps = {
   title: string;
