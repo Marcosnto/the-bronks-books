@@ -4,7 +4,10 @@ import GoBackButton from "../components/GoBackButton";
 import useStore from "../store";
 
 export default function Cart() {
-  const cart = useStore().cart;
+  const store = useStore();
+  const cartItems = store.getCartItems();
+  const totalValue = store.getTotalValue();
+
 
   return (
     <>
@@ -21,10 +24,11 @@ export default function Cart() {
         bg-slate-100
         "
       >
-        {cart.length > 0
-          ? cart.map(({ id, imageLink, title, price, quantity }) => (
+        {cartItems.length > 0
+          ? cartItems.map(({ id, imageLink, title, price, quantity }) => (
               <CartItem
                 key={id}
+                id={id}
                 imageLink={imageLink}
                 title={title}
                 price={price}
@@ -34,7 +38,7 @@ export default function Cart() {
           : null}
         <div className="flex flex-col gap-1 w-8/12">
           <span className="font-extrabold text-2xl mb-4 mt-4">
-            Total: R$ 10.00
+            Total: {totalValue}
           </span>
           <Button
             label="Finalizar Compra"
