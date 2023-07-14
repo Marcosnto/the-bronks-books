@@ -1,5 +1,7 @@
+import CardCollection from "../components/CardCollection";
+
 function Home() {
-  return <div className="text-center">Hello World</div>;
+  return <CardCollection />;
 }
 
 export default Home;

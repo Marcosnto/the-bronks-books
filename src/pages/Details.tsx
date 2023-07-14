@@ -1,7 +1,7 @@
-import { useQuery } from "react-query";
-import fetchBookDetails from "../api/fetchBookDetails";
-import Header from "../components/Header";
 import { useParams } from "react-router-dom";
+import { useQuery } from "react-query";
+
+import fetchBookDetails from "../api/fetchBookDetails";
 import BookDetails from "../components/BookDetails";
 
 export default function Details() {
@@ -20,10 +20,5 @@ export default function Details() {
     return <h1>erro</h1>;
   }
 
-  return (
-    <>
-      <Header title="BookStore" />
-      <BookDetails data={data} />
-    </>
-  );
+  return <BookDetails data={data} />;
 }
