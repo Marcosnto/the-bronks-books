@@ -17,6 +17,14 @@ export type CardProps = {
   price: string;
 };
 
+export type CartItemProps = {
+  id?: number;
+  imageLink: string;
+  title: string;
+  price: string;
+  quantity: number;
+};
+
 export type Book = {
   id: number;
   author: string;
@@ -28,14 +36,6 @@ export type Book = {
   title: string;
   year: number;
   price: string;
-};
-
-export type CartItemProps = {
-  id?: number;
-  imageLink: string;
-  title: string;
-  price: string;
-  quantity: number;
 };
 
 export type DisplayMessageProps = {
