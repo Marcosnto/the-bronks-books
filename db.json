@@ -1,7 +1,4 @@
 {
-  "users": [
-    { "name": "Marcos Neto", "username": "marcos_nto", "password": "12345" }
-  ],
   "books": [
     {
       "id": 1,
