@@ -24,8 +24,9 @@ export default function Cart() {
         bg-slate-100
         "
       >
-        {cartItems.length > 0
-          ? cartItems.map(({ id, imageLink, title, price, quantity }) => (
+        {cartItems.length > 0 ? (
+          <>
+            {cartItems.map(({ id, imageLink, title, price, quantity }) => (
               <CartItem
                 key={id}
                 id={id}
@@ -34,17 +35,22 @@ export default function Cart() {
                 price={price}
                 quantity={quantity}
               />
-            ))
-          : null}
-        <div className="flex flex-col gap-1 w-8/12">
-          <span className="font-extrabold text-2xl mb-4 mt-4">
-            Total: {totalValue}
-          </span>
-          <Button
-            label="Finalizar Compra"
-            onClick={() => console.log("finalizar compra")}
-          />
-        </div>
+            ))}
+            <div className="flex flex-col gap-1 w-8/12">
+              <span className="font-extrabold text-2xl mb-4 mt-4">
+                Total: {totalValue}
+              </span>
+              <Button
+                label="Finalizar Compra"
+                onClick={() => console.log("finalizar compra")}
+              />
+            </div>
+          </>
+        ) : (
+          <div>
+            <h3 className="text-lg">O seu carrinho está vazio</h3>
+          </div>
+        )}
       </div>
     </>
   );

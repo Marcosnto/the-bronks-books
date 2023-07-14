@@ -67,18 +67,21 @@ const useStore = create<StoreProps>((set) => ({
     set((state) => ({
       ...state,
       cart: addItem(state.cart, id),
+      quantityItems: state.quantityItems + 1,
     }));
   },
   removeItem(id: number) {
     set((state) => ({
       ...state,
       cart: removeItem(state.cart, id),
+      quantityItems: state.quantityItems - 1,
     }));
   },
   deleteItem(id: number) {
     set((state) => ({
       ...state,
       cart: deleteItem(state.cart, id),
+      quantityItems: state.quantityItems - 1,
     }));
   },
   setNewBook(book: StoreBookProps) {
