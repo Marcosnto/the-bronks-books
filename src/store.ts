@@ -11,13 +11,13 @@ const DefaultBook = {
 
 const addToCart = (books: Cart, book: StoreBookProps): Cart => {
   if (books[book.id]) {
-    return addItem(books, book.id);
+    return addItemToCar(books, book.id);
   }
 
   return { ...books, [book.id]: book };
 };
 
-const addItem = (books: Cart, id: number): Cart => {
+const addItemToCar = (books: Cart, id: number): Cart => {
   books[id].quantity++;
 
   return books;
@@ -63,10 +63,10 @@ const useStore = create<StoreProps>((set) => ({
       quantityItems: state.quantityItems + 1,
     }));
   },
-  addItem(id: number) {
+  addItemToCar(id: number) {
     set((state) => ({
       ...state,
-      cart: addItem(state.cart, id),
+      cart: addItemToCar(state.cart, id),
       quantityItems: state.quantityItems + 1,
     }));
   },

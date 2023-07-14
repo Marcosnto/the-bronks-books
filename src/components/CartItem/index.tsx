@@ -29,7 +29,7 @@ export default function CartItem({
         <Button
           backgroundColor="bg-gray-100"
           textColor="text-black"
-          onClick={() => store.addItem(id!)}
+          onClick={() => store.addItemToCar(id!)}
           icon={<BiPlus className="text-xl" />}
         />
         <Button

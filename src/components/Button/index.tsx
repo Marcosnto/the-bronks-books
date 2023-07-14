@@ -4,6 +4,7 @@ export default function Button({
   label,
   onClick,
   disabled,
+  type = "button",
   backgroundColor = "bg-emerald-800",
   hoverBackgroundColor = "bg-emerald-600",
   textColor = "text-white",
@@ -11,6 +12,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
+      type={type}
       className={`
       ${backgroundColor}
       ${textColor}
@@ -19,7 +21,6 @@ export default function Button({
       rounded-lg
       w-full
       `}
-      type="button"
       onClick={onClick}
       disabled={disabled}
     >

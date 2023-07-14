@@ -2,6 +2,7 @@ export type ButtonProps = {
   label?: string;
   backgroundColor?: string;
   hoverBackgroundColor?: string;
+  type?: "button" | "submit" | "reset" | undefined;
   textColor?: string;
   onClick: () => void;
   disabled?: boolean;
