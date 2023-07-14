@@ -8,6 +8,7 @@ import "./index.css";
 import Details from "./pages/Details";
 import Cart from "./pages/Cart";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/book/:bookID" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </QueryClientProvider>
   );
