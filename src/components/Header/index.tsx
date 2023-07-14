@@ -16,7 +16,7 @@ export default function Header({ title }: HeaderProps) {
       bg-emerald-600 
       p-5"
     >
-      <Link to="/cart">
+      <Link to="/">
         <h1 className="hover:text-emerald-900">{title}</h1>
       </Link>
       <div className="flex">
