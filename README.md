@@ -10,7 +10,7 @@ Regarding code quality, I chose to use Eslint, Prettier, and TypeScript to help 
 
 Unfortunately, I was unable to fulfill all the requested requirements due to time constraints, such as integrating the Stripe library and creating an editing and deletion environment for store items. However, these are functionalities that I intend to implement to make the system complete.
 
-Finally, there are some areas for improvement in the code, such as componentizing the form inputs, improving the utilization of react-query features, expanding the tests, and enhancing user action notifications (UX).
+Finally, there are some areas for improvement in the code, such as componentizing the form inputs and put regex rules in some of them, improving the utilization of react-query features, expanding the tests, and enhancing user action notifications (UX).
 
 ## Languages
 
